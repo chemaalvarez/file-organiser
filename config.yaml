@@ -1,0 +1,87 @@
+# Configuración del organizador de archivos
+# Edita este archivo para personalizar el comportamiento
+
+# Carpeta raíz por defecto (se puede sobreescribir con --root)
+root: "~/Downloads"
+
+# Umbral de confianza para mover una carpeta en bloque (0.0 - 1.0)
+confidence_threshold: 0.85
+
+# Acción ante duplicados exactos (mismo SHA-256): skip | rename | overwrite
+on_duplicate: "rename"
+
+# Tamaño máximo de archivo para escanear contenido (MB)
+max_content_scan_mb: 100
+
+# Profundidad máxima de escaneo (0 = ilimitada)
+max_depth: 0
+
+# Motor de IA para archivos ambiguos
+ai:
+  enabled: false
+  provider: "ollama"
+  model: "llama3.2"
+  max_tokens: 200
+
+# ── Trabajo ────────────────────────────────────────────────────────────────────
+# Empresas conocidas (nombres tal como aparecen en las carpetas de Trabajo/)
+companies:
+  # Añade aquí tus empresas, por ejemplo:
+  # - ARMS
+  # - MiEmpresa
+
+# ── Personal ───────────────────────────────────────────────────────────────────
+# Personas de la familia (se usan para clasificar dentro de Familiar/)
+# Los archivos con estos nombres se dirigirán a Familiar/{persona}/
+family_members:
+  - chema
+  - susan
+  - martina
+  - alejo
+  - chemita
+  - mana
+  - javier
+  - kevin
+  - papá
+  - papa
+  - mamá
+  - mama
+  - pitufi
+  - frida
+
+# Coches conocidos (modelo → carpeta dentro de Coches/)
+# Formato: "Año Marca Modelo"  — igual que las carpetas existentes
+known_cars:
+  - "2024 Toyota Corolla"
+  - "2020 Toyota C-HR"
+  - "2016 Rav4 420ZLL"
+
+# Viviendas conocidas (ciudad → lista de direcciones)
+# Ayudan a clasificar documentos de vivienda al lugar correcto
+known_homes:
+  Madrid:
+    - "Dalia 66"
+    - "Pensamiento 23"
+    - "Isidoro de Sevilla 30"
+  Miami:
+    - "12535 NE Miami PL"
+    - "2050 NE 140th"
+
+# Palabras clave adicionales por categoría (se suman al diccionario base)
+extra_keywords:
+  trabajo: []
+  personal_gastos: []
+  personal_salud: []
+  personal_vivienda: []
+  personal_documentos: []
+
+# Archivos y carpetas a ignorar siempre
+ignore_patterns:
+  - ".DS_Store"
+  - "Thumbs.db"
+  - ".localized"
+  - "desktop.ini"
+  - "*.tmp"
+  - "*.part"
+  - ".git"
+  - ".ordenar"
