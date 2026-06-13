@@ -8,3 +8,8 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Configuración personal (empresas, familia, coches, viviendas)
+# Usa config.example.yaml como plantilla
+config.yaml
+config.yml
