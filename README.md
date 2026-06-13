@@ -9,6 +9,12 @@ Organizador inteligente de archivos que clasifica `~/Downloads` (o cualquier car
 Requiere [uv](https://github.com/astral-sh/uv) y Python 3.11+.
 
 ```bash
+git clone https://github.com/chemaalvarez/file-organiser.git
+cd file-organiser
+
+# Crear tu configuración personal (nunca sube al repo)
+cp config.example.yaml config.yaml
+
 # Instalar dependencias
 uv sync
 
